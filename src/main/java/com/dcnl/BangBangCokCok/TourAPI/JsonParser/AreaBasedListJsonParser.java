@@ -6,10 +6,6 @@ public class AreaBasedListJsonParser implements JsonParser {
 
 	@Override
 	public ArrayList<Object> parse(String jsonString) {
-
-		
-		
 		return null;
 	}
-
 }

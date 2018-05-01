@@ -27,7 +27,7 @@ public class UrlBuilder {
 	
 	// === 지역 코드 URL ===
 	// 지역 코드를 요청하는 URL Build 메소드
-	public static String sigunguCodeURLBuild (String numOfRows, String pageNo, String areaCode) throws UnsupportedEncodingException {		
+	public static String areaCodeURLBuild (String numOfRows, String pageNo, String areaCode) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode" + "?ServiceKey=" + serviceKey +
 																							  "&numOfRows=" + numOfRows +
 																							  "&pageNo=" + pageNo +
@@ -42,7 +42,7 @@ public class UrlBuilder {
 	
 	// === 서비스 분류 코드 (cat1, cat2, cat3) URL ===
 	// 서비스 분류코드 : 관광코드의 타입과 대분류, 중분류에 따라서 소분류 코드를 조회하는 URL Build 메소드
-	public static String categoryCode3URLBuild (String numOfRows, String pageNo, String contentTypeId, String cat1, String cat2) throws UnsupportedEncodingException {		
+	public static String categoryCodeURLBuild (String numOfRows, String pageNo, String contentTypeId, String cat1, String cat2) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/categoryCode" + "?ServiceKey=" + serviceKey +
 																								  "&numOfRows=" + numOfRows +
 																								  "&pageNo=" + pageNo +
