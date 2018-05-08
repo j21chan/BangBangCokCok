@@ -13,7 +13,7 @@ import com.dcnl.BangBangCokCok.Dto.TourAPI.AreaCode;
 public class JsonParserTest {
 	
 	// AreaCode URL에서 나온 JSON을 파싱해주는 메소드
-	public static ArrayList<AreaCode> parseAreaCode (String stringJSON) throws IOException, ParseException {
+	public static ArrayList<Object> parseAreaCode (String stringJSON) throws IOException, ParseException {
 
         // JSON 객체 출력
         System.out.println("******** Tour API에서 받아온 JSON ********");
@@ -53,7 +53,7 @@ public class JsonParserTest {
     	String code = null;
         String name = null;
         String rnum = null;
-        ArrayList<AreaCode> dtos = new ArrayList<AreaCode>();
+        ArrayList<Object> dtos = new ArrayList<Object>();
         
         // items json array에 담긴 각 json 오브젝트를 빼오는 작업
         System.out.println("******** JSON Parser를 이용해서 파싱 ********");
@@ -325,7 +325,6 @@ public class JsonParserTest {
         		String createdtime = temp.get("createdtime").toString();
             	System.out.println("createdtime : " + createdtime);
         	}
-        	
         	
         	if(temp.containsKey("firstimage")) {
         		String firstimage = temp.get("firstimage").toString();
