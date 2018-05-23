@@ -27,7 +27,7 @@ public class UrlBuilder {
 	
 	// === 지역 코드 URL ===
 	// 지역 코드를 요청하는 URL Build 메소드
-	public static String areaCodeURLBuild (String numOfRows, String pageNo, String areaCode) throws UnsupportedEncodingException {		
+	public String areaCodeURLBuild (String numOfRows, String pageNo, String areaCode) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaCode" + "?ServiceKey=" + serviceKey +
 																							  "&numOfRows=" + numOfRows +
 																							  "&pageNo=" + pageNo +
@@ -42,7 +42,7 @@ public class UrlBuilder {
 	
 	// === 서비스 분류 코드 (cat1, cat2, cat3) URL ===
 	// 서비스 분류코드 : 관광코드의 타입과 대분류, 중분류에 따라서 소분류 코드를 조회하는 URL Build 메소드
-	public static String categoryCodeURLBuild (String numOfRows, String pageNo, String contentTypeId, String cat1, String cat2) throws UnsupportedEncodingException {		
+	public String categoryCodeURLBuild (String numOfRows, String pageNo, String contentTypeId, String cat1, String cat2) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/categoryCode" + "?ServiceKey=" + serviceKey +
 																								  "&numOfRows=" + numOfRows +
 																								  "&pageNo=" + pageNo +
@@ -59,7 +59,7 @@ public class UrlBuilder {
 	
 	// === 지역 기반 관광정보 조회 URL  ===
 	// 지역기반 관광정보 조회 : 지역코드를 기반으로 관광지 정보를 조회하는 URL Build 메소드
-	public static String areaBasedListURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String areaCode, String sigunguCode, String cat1, String cat2, String cat3) throws UnsupportedEncodingException {		
+	public String areaBasedListURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String areaCode, String sigunguCode, String cat1, String cat2, String cat3) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList" + "?ServiceKey=" + serviceKey +
 																								   "&numOfRows=" + numOfRows + 
 																								   "&pageNo=" + pageNo + 
@@ -81,7 +81,7 @@ public class UrlBuilder {
 	
 	// === 위치 기반 관광정보 조회 URL  ===
 	// 위치 기반 관광정보 조회 : 위치 기반으로 관광지 정보를 조회하는 URL Build 메소드
-	public static String locationBasedListURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String mapX, String mapY, String radius) throws UnsupportedEncodingException {		
+	public String locationBasedListURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String mapX, String mapY, String radius) throws UnsupportedEncodingException {		
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList" + "?ServiceKey=" + serviceKey +
 																									   "&numOfRows=" + numOfRows + 
 																									   "&pageNo=" + pageNo + 
@@ -101,7 +101,7 @@ public class UrlBuilder {
 	
 	// === 키워드 검색 관광정보 조회 URL  ===
 	// 키워드 검색 관광정보 조회 : 키워드 검색으로 관광지 정보를 조회하는 URL Build 메소드
-	public static String searchKeywordURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String keyword, String areaCode, String sigunguCode, String cat1, String cat2, String cat3) throws UnsupportedEncodingException {				
+	public String searchKeywordURLBuild (String numOfRows, String pageNo, String arrange, String contentTypeId, String keyword, String areaCode, String sigunguCode, String cat1, String cat2, String cat3) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword" + "?ServiceKey=" + serviceKey +
 																								   "&numOfRows=" + numOfRows + 
 																								   "&pageNo=" + pageNo + 
@@ -125,7 +125,7 @@ public class UrlBuilder {
 	
 	// === 행사 검색 관광정보 조회 URL  ===
 	// 행사 검색 관광정보 조회 : 날짜를 기반으로 행사 정보를 조회하는 URL Build 메소드
-	public static String searchFestivalURLBuild (String numOfRows, String pageNo, String arrange, String eventStartDate, String eventEndDate, String areaCode, String sigunguCode) throws UnsupportedEncodingException {				
+	public String searchFestivalURLBuild (String numOfRows, String pageNo, String arrange, String eventStartDate, String eventEndDate, String areaCode, String sigunguCode) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival" + "?ServiceKey=" + serviceKey +
 																								   "&numOfRows=" + numOfRows + 
 																								   "&pageNo=" + pageNo + 
@@ -145,7 +145,7 @@ public class UrlBuilder {
 	
 	// === 베니키아 한옥, 굿스테이 검색 관광정보 조회 URL  ===
 	// 베니키아, 한옥, 굿스테이 정보 조회 : 베니키아, 한옥, 굿스테이 조회하는 URL Build 메소드
-	public static String searchStayURLBuild (String numOfRows, String pageNo, String arrange, String hanOk, String benikia, String goodStay, String areaCode, String sigunguCode) throws UnsupportedEncodingException {				
+	public String searchStayURLBuild (String numOfRows, String pageNo, String arrange, String hanOk, String benikia, String goodStay, String areaCode, String sigunguCode) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchStay" + "?ServiceKey=" + serviceKey +
 																								   "&numOfRows=" + numOfRows + 
 																								   "&pageNo=" + pageNo + 
@@ -166,8 +166,8 @@ public class UrlBuilder {
 	
 	// === 상세 정보 조회 URL  ===
 	// 상세 정보 조회 URL : 공통 정보를 조회하는 URL Build 메소드
-	public static String detailCommonURLBuild (String contentId, String contentTypeId, String defaultYN, String firstImageYN, String areacodeYN, String catcodeYN, String addrinfoYN, String mapinfoYN, String overviewYN) throws UnsupportedEncodingException {				
-		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon" + "?ServiceKey=" + serviceKey +
+	public String detailCommonURLBuild (String contentId, String contentTypeId, String defaultYN, String firstImageYN, String areacodeYN, String catcodeYN, String addrinfoYN, String mapinfoYN, String overviewYN) throws UnsupportedEncodingException {				
+		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon" +  "?ServiceKey=" + serviceKey +
 																								   "&MobileOS="+ mobileOS +
 																								   "&MobileApp=" + mobileApp + 
 																								   "&contentId=" + contentId +
@@ -186,7 +186,7 @@ public class UrlBuilder {
 	}
 	
 	// 소개 정보 조회 URL : 소개 정보를 조회하는 URL Build 메소드
-	public static String detailIntroURLBuild (String contentId, String contentTypeId, String introYN) throws UnsupportedEncodingException {				
+	public String detailIntroURLBuild (String contentId, String contentTypeId, String introYN) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro" + "?ServiceKey=" + serviceKey +
 																								   "&MobileOS=" + mobileOS +
 																								   "&MobileApp=" + mobileApp + 
@@ -200,7 +200,7 @@ public class UrlBuilder {
 	}
 	
 	// 반복 정보 조회 URL : 소개 정보를 조회하는 URL Build 메소드
-	public static String detailInfoURLBuild (String contentId, String contentTypeId, String detailYN) throws UnsupportedEncodingException {				
+	public String detailInfoURLBuild (String contentId, String contentTypeId, String detailYN) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailInfo" + "?ServiceKey=" + serviceKey +
 																							   	"&MobileOS=" + mobileOS + 
 																							   	"&MobileApp=" + mobileApp + 
@@ -214,7 +214,7 @@ public class UrlBuilder {
 	}
 	
 	// 반복 정보 조회 URL : 소개 정보를 조회하는 URL Build 메소드
-	public static String detailImageURLBuild (String contentId, String contentTypeId, String imageYN) throws UnsupportedEncodingException {				
+	public String detailImageURLBuild (String contentId, String contentTypeId, String imageYN) throws UnsupportedEncodingException {				
 		String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailImage" + "?ServiceKey=" + serviceKey +
 																							   	 "&MobileOS=" + mobileOS +
 																						   	   	 "&MobileApp=" + mobileApp + 

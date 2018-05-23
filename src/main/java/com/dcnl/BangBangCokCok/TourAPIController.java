@@ -14,6 +14,7 @@ public class TourAPIController {
 	
 	private static TourAPIDao dao = new TourAPIDao();
 	
+	// 지역코드 조회
 	@RequestMapping(value = "/areaCode")
 	public Map<String, Object> areaCode(@RequestParam("numOfRows") String numOfRows,
 										@RequestParam("pageNo")    String pageNo,
@@ -24,6 +25,20 @@ public class TourAPIController {
 		return response;
 	}
 	
+	// 서비스 분류코드 조회
+	@RequestMapping(value = "/categoryCode")
+	public Map<String, Object> categoryCode(@RequestParam("numOfRows") 		String numOfRows,
+											@RequestParam("pageNo")    		String pageNo,
+											@RequestParam("contentTypeId") 	String contentTypeId,
+											@RequestParam("cat1") 			String cat1,
+											@RequestParam("cat2") 			String cat2) {
+		
+		Map<String, Object> response = dao.getCategoryCode(numOfRows, pageNo, contentTypeId, cat1, cat2);
+		
+		return response;
+	}
+	
+	// 지역 기반 관광정보 조회
 	@RequestMapping(value = "/areaBasedList")
 	public Map<String, Object> areaBasedList(@RequestParam("numOfRows") 	String numOfRows,
 											 @RequestParam("pageNo") 		String pageNo,
@@ -41,4 +56,6 @@ public class TourAPIController {
 		
 		return response;
 	}
+	
+	
 }

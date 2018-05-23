@@ -7,12 +7,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class UrlRequest {
-	public static String urlRequest (String stringURL) throws IOException {
+	public String urlRequest (String stringURL) throws IOException {
 		
 		// TourAPI로 보낼 URL
         URL url = new URL(stringURL);
-
-		//URL url = new URL(stringURL);
 		
         // HttpURLConnection 연결
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
