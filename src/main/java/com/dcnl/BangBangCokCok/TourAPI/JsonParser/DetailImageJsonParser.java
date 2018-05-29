@@ -13,6 +13,7 @@ public class DetailImageJsonParser implements JsonParser {
 
 	@Override
 	public ArrayList<Object> parse(String jsonString) {
+		
 		// 객체 생성을 위한 선언 및 초기화
 		String contentid = null;
 		String imagename = null;
