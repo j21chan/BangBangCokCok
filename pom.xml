@@ -140,7 +140,8 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		 
+		<!-- 추가되는 디펜던시 끝 -->
+		
 	</dependencies>
     <build>
         <plugins>

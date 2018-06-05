@@ -8,12 +8,13 @@
 		insert into user(id, pw, UserName) values (#{param1}, #{param2}, #{param3})
 	</insert>
 	
-	<!-- 
-	<select id="listDao" resultType="com.javalec.spring_mybatis.dto.ContentDto">
-		SELECT * FROM BOARD ORDER BY MID DESC
+	<select id="loginUser" resultType="com.dcnl.BangBangCokCok.Dto.User.UserDto">
+		SELECT * 
+		FROM user
+		WHERE id = #{param1} and pw = #{param2}
 	</select>
 	
-	
+	<!--
 	<insert id="writeDao">
 		INSERT INTO BOARD (MID, MWRITER, MCONTENT) VALUES (BOARD_SEQ.NEXTVAL, #{param1}, #{param2})
 	</insert>
